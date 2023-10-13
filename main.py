@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 import json
-
+import os
 import discord
 import requests
 from discord.ext import commands
+
+discord_token = os.environ["DISCORD_MCPOLITICS"]
 
 errors = []
 
@@ -93,4 +95,4 @@ async def verify(ctx):
     print(ctx.author.id)
 
 
-discord_client.run("ODYxNjcwOTQ0NDM1MDc3MTQw.Gf9o6y.9GcBQH-PQoy7x7-rvIzBfENhNyRg3Xg7XaBwj0")
+discord_client.run(discord_token)
